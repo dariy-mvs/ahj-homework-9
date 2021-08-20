@@ -1,0 +1,248 @@
+body {
+  color: #999;
+  background-color: rgb(221, 238, 240);
+}
+.coll__box {
+  margin: 30px auto;
+  width: 85%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+}
+.coll__btn {
+  background-color: rgb(37, 58, 83);
+  border: none;
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  color:rgb(221, 238, 240);
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+.coll__btn:hover {
+  background-color: rgba(82, 98, 246, 0.993);
+}
+.coll__wrapper {
+  width: 100%;
+  margin: 10px auto;
+  box-sizing: border-box;
+  max-height: 0;
+  border: 1px solid #000000;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.2s ease-out 0.5s, padding 0.5s;
+}
+.coll__text {
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+}
+.active {
+  display: block;
+  padding: 15px;
+  opacity: 100%;
+  max-height: 200px;
+}
+
+.widget {
+  max-width: 300px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.widget__box {
+  margin: 20px 50px 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 4;
+  position: relative;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease-out, max-height 0.5s ease-out, max-width 0.5s ease-out;
+}
+.widget_active {
+  opacity: 1;
+  max-height: 900px;
+  max-width: 100%;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: rgb(180, 36, 36);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.widget__title {
+  width: 100%;
+  height: 50px;
+  font: 1.5em sans-serif;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 20px;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+.widget__field {
+  margin: 20px auto;
+  width: 80%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 7px;
+}
+.widget__submit {
+  border: none;
+  background-color: rgb(95, 167, 104);
+  color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  height: 50px;
+}
+.widget__btn {
+  border-radius: 50%;
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border: none;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  transition: width 0.3s ease-out, height 0.3s ease-out, opacity 0.5s ease-out 0.3s; 
+}
+.widget__btn:hover {
+  width: 75px;
+  height: 75px;
+}
+.btn_hidden {
+  opacity: 0;
+}
+.like {
+  width: 250px;
+  height: 60px;
+  border: none;
+  background-color: rgb(173, 164, 164);
+  border-radius: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 50px auto 50px 50px;
+  cursor: pointer;
+  position: relative;
+}
+.like:hover {
+  background-color: rgb(206, 20, 20);
+}
+.heart {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation-duration: 500ms;
+  animation-name: fly;
+}
+@keyframes fly {
+  0%   { transform: translateY(0); }
+  25%  { 
+    transform: translate(50px, -50px);
+    opacity: 0.75;
+    }
+  50%  { 
+    transform: translate(0, -100px);
+    opacity: 0.5;
+  }
+  75%  { 
+    transform: translate(50px, -150px);
+    opacity: 0.25;
+    }
+  100% { 
+    transform: translate(0px, -200px);
+    opacity: 0.1;
+  }
+}
+.heart1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation-duration: 500ms;
+  animation-name: fly1;
+}
+@keyframes fly1 {
+  0%   { transform: translateY(0); }
+  25%  { 
+    transform: translate(0, -50px);
+    opacity: 0.75;
+    }
+  50%  { 
+    transform: translate(50px, -100px);
+    opacity: 0.5;
+  }
+  75%  { 
+    transform: translate(-50px, -150px);
+    opacity: 0.25;
+    }
+  100% { 
+    transform: translate(0px, -200px);
+    opacity: 0.1;
+  }
+}
+.heart2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation-duration: 500ms;
+  animation-name: fly2;
+}
+@keyframes fly2 {
+  0%   { transform: translateY(0); }
+  25%  { 
+    transform: translate(0, -50px);
+    opacity: 0.75;
+    }
+  50%  { 
+    transform: translate(-50px, -100px);
+    opacity: 0.5;
+  }
+  75%  { 
+    transform: translate(50px, -150px);
+    opacity: 0.25;
+    }
+  100% { 
+    transform: translate(0px, -200px);
+    opacity: 0.1;
+  }
+}
+.heart3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation-duration: 500ms;
+  animation-name: fly3;
+}
+@keyframes fly3 {
+  0%   { transform: translateY(0); }
+  25%  { 
+    transform: translate(50px, -50px);
+    opacity: 0.75;
+    }
+  50%  { 
+    transform: translate(0, -100px);
+    opacity: 0.5;
+  }
+  75%  { 
+    transform: translate(-50px, -150px);
+    opacity: 0.25;
+    }
+  100% { 
+    transform: translate(0px, -200px);
+    opacity: 0.1;
+  }
+}
